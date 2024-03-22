@@ -1,6 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -10,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
     "--branch=stable", -- latest stable release
     lazypath,
   })
+  
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
@@ -34,4 +34,29 @@ require("lazy").setup({
     "kvrohit/rasmus.nvim",
 { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-})
+ 'rmagatti/goto-preview',
+ {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+},
+-- Lazy
+-- -- LazySpec (plugin specification)
+-- return {
+{ 'dasupradyumna/midnight.nvim', lazy = false, priority = 1000 },
+-- `lazy` and `priority` are only needed if this is your primary colorscheme to load it first
+-- }
+{
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equalent to setup({}) function
+},
+{ 'nvim-tree/nvim-tree.lua'},
+{'tpope/vim-fugitive'},
+{'lewis6991/gitsigns.nvim'},
+{'nvim-tree/nvim-web-devicons'}
+
+
+}) 
+
