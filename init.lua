@@ -20,6 +20,7 @@ vim.cmd("set expandtab")
 vim.cmd('let &t_SI = \"\\e[6 q\"')
 vim.cmd('let &t_EI = \"\\e[2 q\"')
 vim.cmd('set cursorline')
+vim.cmd('set signcolumn=yes')
 
 vim.cmd('nnoremap <C-h> <C-w>h')
 vim.cmd('nnoremap <C-j> <C-w>j')
