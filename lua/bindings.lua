@@ -14,7 +14,7 @@ vim.cmd('nnoremap <leader>l <C-w>l')
 
 -- Tabs
 vim.keymap.set('n', '<leader>n', '<cmd>tabnext<cr>')
-vim.keymap.set('n', '<leader>c', '<cmd>tabnew<cr>')
+vim.keymap.set('n', '<leader>t', '<cmd>tabnew<cr>')
 vim.keymap.set('n', '<leader>b', '<cmd>tabprevious<cr>')
 
 -- navigating tabs
