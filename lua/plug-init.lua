@@ -51,6 +51,9 @@ cmp.setup.cmdline(':', {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+require("lspconfig").html.setup({
+  filetypes = {"html", "templ","hbs"}
+})
 require("mason-lspconfig").setup()
 
 require("mason-lspconfig").setup_handlers {

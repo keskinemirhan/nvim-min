@@ -2,6 +2,10 @@ local cmp = require("cmp")
 
 vim.g.mapleader = " "
 
+-- Navigating Buffers
+vim.keymap.set('n', '<C-k>', '<C-u>zz')
+vim.keymap.set('n', '<C-j>', '<C-d>zz')
+
 -- Windows 
 vim.keymap.set('n', '<leader>r', '<cmd>vsplit<cr>')
 vim.keymap.set('n', '<leader>p', '<cmd>split<cr>')
@@ -60,7 +64,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<leader>s', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
     vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
     vim.keymap.set('n', '<leader>wl', function()
